@@ -33,10 +33,12 @@ export default {
       }
       if (liff.isApiAvailable("shareTargetPicker")) {
         try {
-          const picker = await liff.shareTargetPicker([{
+          const picker = await liff.shareTargetPicker([
+            {
             type: "text",
             text: "Hello, World!",
-          }, ]);
+          }
+          , ]);
           if (picker) {
             // succeeded in sending a message through TargetPicker
             console.log(`[${picker.status}] Message sent!`);
